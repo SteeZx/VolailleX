@@ -16,4 +16,6 @@ abstract public class Volaille {
 
     abstract public void affecter_prix();
 
+    abstract public void definir_poids_abattage();
+
 }
