@@ -18,4 +18,6 @@ abstract public class Volaille {
 
     abstract public void definir_poids_abattage();
 
+    abstract public boolean abbatable();
+
 }

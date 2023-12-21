@@ -30,4 +30,9 @@ public class Poulet extends Volaille {
         poids_abattage = scan.nextInt();
         scan.close();
     }
+
+    @Override
+    public boolean abbatable() {
+        return kg>=poids_abattage;
+    }
 }
