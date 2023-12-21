@@ -5,10 +5,16 @@ import javafx.util.Pair;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Classe de l'élevage de volailles.
+ */
 public class Elevage {
     ArrayList<Volaille> elevage = new ArrayList<>();
     static int id;
 
+    /**
+     * Méthode pour ajouter une volaille à l'élevage.
+     */
     void ajouterVolaille() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Poids de la volaille");
@@ -26,10 +32,19 @@ public class Elevage {
                 id++;
         }
     }
+
+    /**
+     * Méthode pour ajouter plusieurs volailles à l'élevage.
+     * @param arr liste des volailles à ajouter
+     */
     void ajouterVolaille(ArrayList<Volaille> arr){
         this.elevage.addAll(arr);
     }
 
+    /**
+     * Méthode pour lister les volailles abbatables.
+     * @return cp liste des volailles abbatables et leur prix.
+     */
     ArrayList<Pair<Volaille, Double>> listeAbbatable() {
         ArrayList<Pair<Volaille, Double>> cp = new ArrayList<>();
         for (Volaille v : this.elevage) {
