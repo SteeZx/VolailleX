@@ -1,5 +1,7 @@
 package org.volaille;
 
+import javafx.util.Pair;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -26,5 +28,15 @@ public class Elevage {
     }
     void ajouterVolaille(ArrayList<Volaille> arr){
         this.elevage.addAll(arr);
+    }
+
+    ArrayList<Pair<Volaille, Double>> listeAbbatable() {
+        ArrayList<Pair<Volaille, Double>> cp = new ArrayList<>();
+        for (Volaille v : this.elevage) {
+            if (v.abbatable()) {
+                cp.add(new Pair<>(v, v.calcul_prix()));
+            }
+        }
+        return cp;
     }
 }
